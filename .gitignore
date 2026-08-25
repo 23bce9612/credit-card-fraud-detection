@@ -1,0 +1,19 @@
+# IntelliJ
+.idea/
+*.iml
+
+# Java
+backend/target/
+
+# Python
+ml-service/venv/
+ml-service/__pycache__/
+ml-service/src/__pycache__/
+*.pyc
+
+# Environment / secrets
+.env
+application-local.propertiesml-service/data/creditcard.csv
+ml-service/data/
+
+ml-service/data/
