@@ -1,0 +1,140 @@
+FRAUDGUARD: IEEE EXPERIMENTAL RESULTS
+Credit Card Fraud Detection System
+
+==================================================
+1. DATASET DETAILS
+==================================================
+
+Dataset: Credit Card Fraud Detection
+Total Transactions: 284,807
+Training Samples: 227,845
+Testing Samples: 56,962
+Training-Testing Split: 80:20
+Random State: 42
+Stratified Sampling: Yes
+Target Variable: Class
+Evaluation Type: Binary Classification
+
+==================================================
+2. PROPOSED ENSEMBLE MODEL PERFORMANCE
+==================================================
+
+Accuracy: 99.88%
+Precision: 60.84%
+Recall: 88.78%
+F1-Score: 72.20%
+ROC-AUC: 0.9761
+Average Precision (AP): 0.8638
+
+The proposed ensemble model achieved an accuracy of 99.88% and a recall of 88.78%. It correctly identified 87 fraudulent transactions out of 98 actual fraudulent transactions in the test set. The model missed 11 fraudulent transactions and incorrectly classified 56 legitimate transactions as fraudulent.
+
+==================================================
+3. CONFUSION MATRIX
+==================================================
+
+                         Predicted
+                   Legitimate     Fraud
+Actual Legitimate     56,808        56
+Actual Fraud              11        87
+
+True Negatives (TN): 56,808
+False Positives (FP): 56
+False Negatives (FN): 11
+True Positives (TP): 87
+
+Interpretation:
+
+- True Negatives: 56,808 legitimate transactions were correctly classified.
+- False Positives: 56 legitimate transactions were incorrectly flagged as fraudulent.
+- False Negatives: 11 fraudulent transactions were incorrectly classified as legitimate.
+- True Positives: 87 fraudulent transactions were correctly identified.
+
+==================================================
+4. COMPARISON OF MACHINE LEARNING MODELS
+==================================================
+
+Model: AdaBoost
+Accuracy: 98.03%
+Precision: 7.34%
+Recall: 89.80%
+F1-Score: 13.57%
+
+Model: Random Forest
+Accuracy: 99.95%
+Precision: 90.59%
+Recall: 78.57%
+F1-Score: 84.15%
+
+Model: Logistic Regression
+Accuracy: 97.55%
+Precision: 6.10%
+Recall: 91.84%
+F1-Score: 11.44%
+
+Model: Proposed Ensemble
+Accuracy: 99.88%
+Precision: 60.84%
+Recall: 88.78%
+F1-Score: 72.20%
+
+==================================================
+5. ROC AND PRECISION-RECALL ANALYSIS
+==================================================
+
+ROC-AUC: 0.9761
+Average Precision: 0.8638
+
+The ROC-AUC score indicates that the proposed ensemble model demonstrates strong ability to distinguish between legitimate and fraudulent transactions. The Average Precision score provides additional information about precision and recall performance, which is particularly important for an imbalanced fraud detection dataset.
+
+==================================================
+6. FIGURE LIST
+==================================================
+
+Fig. 1. FraudGuard System Architecture
+Description: Illustrates the system components and the flow of transaction data through the application backend, machine learning service, fraud detection process, and database.
+
+Fig. 2. Confusion Matrix of the Proposed Ensemble Model
+File: fig2_confusion_matrix.png / fig2_confusion_matrix.pdf
+Description: Shows the true positive, true negative, false positive, and false negative predictions.
+
+Fig. 3. ROC Curve of the Proposed Ensemble Model
+File: fig3_roc_curve.png / fig3_roc_curve.pdf
+Description: Illustrates the trade-off between the true positive rate and false positive rate across classification thresholds.
+
+Fig. 4. Precision-Recall Curve of the Proposed Ensemble Model
+File: fig4_pr_curve.png / fig4_pr_curve.pdf
+Description: Illustrates the relationship between precision and recall across classification thresholds.
+
+Fig. 5. Performance Comparison of Machine Learning Models
+File: fig5_model_comparison.png / fig5_model_comparison.pdf
+Description: Compares the accuracy, precision, recall, and F1-score of AdaBoost, Random Forest, Logistic Regression, and the proposed ensemble model.
+
+==================================================
+7. EXPERIMENTAL ANALYSIS
+==================================================
+
+The experimental results show that all evaluated models exhibit different trade-offs between fraud detection and false-positive control.
+
+Random Forest achieved the highest F1-score of 84.15% and precision of 90.59%, indicating a stronger balance between precision and recall among the evaluated models according to these reported metrics.
+
+Logistic Regression achieved the highest recall of 91.84%, but its precision was 6.10%. AdaBoost achieved a recall of 89.80%, with a precision of 7.34%.
+
+The proposed ensemble achieved a recall of 88.78%, precision of 60.84%, and F1-score of 72.20%. Its ROC-AUC was 0.9761, and its Average Precision was 0.8638.
+
+These results illustrate the importance of considering multiple evaluation metrics when assessing fraud detection systems. Accuracy alone may not fully represent model effectiveness when fraudulent transactions form a small proportion of the dataset.
+
+==================================================
+8. CONCLUSION
+==================================================
+
+The evaluated FraudGuard ensemble model achieved 99.88% accuracy, 88.78% recall, and a ROC-AUC of 0.9761 on the reported test set. It correctly identified 87 out of 98 fraudulent transactions while producing 56 false-positive predictions.
+
+Although the ensemble demonstrated strong recall and ROC-AUC, Random Forest achieved a higher F1-score and precision in this evaluation. Therefore, the models should be compared according to the intended operational priorities, including fraud detection, false alarms, and the cost of missed fraudulent transactions.
+
+==================================================
+9. REPRODUCIBILITY NOTE
+==================================================
+
+The dataset split used an 80:20 ratio, random state 42, and stratified sampling. The reported metrics correspond to the current evaluation run.
+
+Before final IEEE paper submission, verify that all models were evaluated on the same test samples and that the saved ensemble model was trained using the same dataset, feature preparation, and split assumptions. Confirm the final figure
