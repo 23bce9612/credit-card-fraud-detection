@@ -1,0 +1,5 @@
+,Accuracy,Precision,Recall,F1-score
+AdaBoost,0.980320,0.073394,0.897959,0.135698
+Random Forest,0.999491,0.905882,0.785714,0.841530
+Logistic Regression,0.975528,0.060976,0.918367,0.114358
+Proposed Ensemble,0.998824,0.608392,0.887755,0.721992
